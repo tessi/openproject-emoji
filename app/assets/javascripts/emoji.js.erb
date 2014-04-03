@@ -1,0 +1,61 @@
+<%#-- copyright
+Copyright (C) 2014 Philipp Tessenow
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See doc/COPYRIGHT.md for more details.
+
+++#%>
+
+//= require emojify
+// emojify configuration would go here
+
+jQuery(function ($) {
+  emojify.setConfig({
+    emojify_tag_type : 'div',                        // Only run emojify.js on this element
+    only_crawl_id    : null,                         // Use to restrict where emojify.js applies
+    img_dir          : '<%= image_path 'emojis' %>', // Directory for emoji images
+    ignored_tags     : {                             // Ignore the following tags
+        'SCRIPT'  : 1,
+        'TEXTAREA': 1,
+        'A'       : 1,
+        'PRE'     : 1,
+        'CODE'    : 1
+    }
+  });
+
+  // autocomplete emojis in textareas
+  function enable_emoji_textarea_auto_completion(textareas) {
+    textareas.each(function(){
+      var emojis_list = $.map(emojify.emojiNames, function(value, i) {
+        return {'id':i, 'name':value};
+      });
+      jQuery(this).atwho({
+        at: ':',
+        start_with_space: false,
+        data: emojify.emojiNames,
+        tpl: "<li data-value=':${name}:'><img src='<%= image_path 'emojis' %>/${name}.png' height='20' width='20'/> ${name} </li>"
+      });
+    });
+  }
+
+  function setup_emojis() {
+    emojify.run();
+    enable_emoji_textarea_auto_completion($('textarea.wiki-edit'));
+  }
+
+  // when someone previews content, run emojify
+  $('body').ajaxComplete(function() { setup_emojis(); });
+
+  // handle prototype ajax requests
+  Ajax.Responders.register({
+    onSuccess: function(request) { setup_emojis(); }
+  });
+
+  setup_emojis()
+});
