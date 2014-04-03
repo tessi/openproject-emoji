@@ -13,8 +13,8 @@ See doc/COPYRIGHT.md for more details.
 ++*/
 
 .emoji {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.2em;
+    height: 1.2em;
     display: inline-block;
-    margin-bottom: -0.25em;
+    margin-bottom: -0.1em;
 }
