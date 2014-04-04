@@ -1,6 +1,13 @@
 # OpenProject Emoji Plugin
 
+Adds emojis to OpenProject
+
 ![Screenshot of emojis in OpenProject](doc/screenshot.png?raw=true)
+
+with auto-completion in textareas
+
+![Screenshot of emojis in OpenProject](doc/screenshot_auto_completion.png?raw=true)
+
 
 ## Plugin Installation
 
