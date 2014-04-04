@@ -1,5 +1,7 @@
 # OpenProject Emoji Plugin
 
+![Screenshot of emojis in OpenProject](doc/screenshot.png?raw=true)
+
 ## Plugin Installation
 
 Edit the `Gemfile.plugins` file in your openproject-installation directory to contain the following lines:
