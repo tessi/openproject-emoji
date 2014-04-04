@@ -74,7 +74,5 @@ Copyright (c) 2012 whynne@deviantart. All rights reserved.
 All other emoji images
 Copyright (c) 2012 Apple Inc. All rights reserved.
 
-Copyright (C) 2014 the OpenProject Foundation (OPF)
-
 
 The remaining plugin is licensed under the GNU GPL v3. See [doc/COPYRIGHT.md](doc/COPYRIGHT.md) for details.
