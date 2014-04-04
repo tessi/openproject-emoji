@@ -30,16 +30,19 @@ jQuery(function ($) {
 
   // autocomplete emojis in textareas
   function enable_emoji_textarea_auto_completion(textareas) {
+    var emojis_list = $.map(emojify.emojiNames, function(value, i) {
+      return {'id':i, 'name':value};
+    });
     textareas.each(function(){
-      var emojis_list = $.map(emojify.emojiNames, function(value, i) {
-        return {'id':i, 'name':value};
-      });
-      jQuery(this).atwho({
-        at: ':',
-        start_with_space: false,
-        data: emojify.emojiNames,
-        tpl: "<li data-value=':${name}:'><img src='<%= image_path 'emojis' %>/${name}.png' height='20' width='20'/> ${name} </li>"
-      });
+      if (jQuery(this).data('emoji-completion') != 'on') {
+        jQuery(this).data('emoji-completion', 'on');
+        jQuery(this).atwho({
+          at: ':',
+          start_with_space: false,
+          data: emojify.emojiNames,
+          tpl: "<li data-value=':${name}:'><img src='<%= image_path 'emojis' %>/${name}.png' height='20' width='20'/> ${name} </li>"
+        });
+      }
     });
   }
 
