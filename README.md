@@ -40,7 +40,7 @@ Please find ways to contact us on the OpenProject [support page](https://www.ope
 
 This OpenProject plugin is an open source project and we encourage you to help us out. We'd be happy if you do one of these things:
 
-* Add new translations at [our crowin project](https://crowdin.net/project/openproject)
+* Add new translations at [our crowdin project](https://crowdin.net/project/openproject)
 * Create a new [work package in the Translations plugin project on openproject.org](https://www.openproject.org/projects/translations/work_packages) if you find a bug or need a feature
 * Help out other people on our [forums](https://www.openproject.org/projects/openproject/boards)
 * Contribute code via GitHub Pull Requests, see our [contribution page](https://www.openproject.org/projects/openproject/wiki/Contribution) for more information
