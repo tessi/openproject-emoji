@@ -34,6 +34,12 @@ jQuery(function ($) {
       return {'id':i, 'name':value};
     });
     textareas.each(function(){
+      if (jQuery(this).attr('id') == 'export_card_configuration_rows') {
+        // do not offer auto-completion for the openproject_pdf-export gem' card configuration
+        // text area, because it wants YAML data (containing lots of colons) which
+        // is cumbersome to enter when we auto-complete those all the time
+        return;
+      }
       if (jQuery(this).data('emoji-completion') != 'on') {
         jQuery(this).data('emoji-completion', 'on');
         jQuery(this).atwho({
