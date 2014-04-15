@@ -22,7 +22,6 @@ jQuery(function ($) {
     ignored_tags     : {                             // Ignore the following tags
         'SCRIPT'  : 1,
         'TEXTAREA': 1,
-        //'A'       : 1,
         'PRE'     : 1,
         'CODE'    : 1
     }
@@ -52,18 +51,15 @@ jQuery(function ($) {
     });
   }
 
+  var timeout_id = undefined;
   function setup_emojis() {
-    emojify.run();
-    enable_emoji_textarea_auto_completion($('textarea.wiki-edit'));
+    if (timeout_id !== undefined) { clearTimeout(timeout_id) };
+    timeout_id = setTimeout(function(){
+      emojify.run();
+      enable_emoji_textarea_auto_completion($('textarea.wiki-edit'));
+    },0);
   }
 
-  // when someone previews content, run emojify
-  $('body').ajaxComplete(function() { setup_emojis(); });
-
-  // handle prototype ajax requests
-  Ajax.Responders.register({
-    onSuccess: function(request) { setup_emojis(); }
-  });
-
+  $(document).bind('DOMNodeInserted', function(event){ setup_emojis(); });
   setup_emojis()
 });
