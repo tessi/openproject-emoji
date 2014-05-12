@@ -43,7 +43,7 @@ jQuery(function ($) {
         jQuery(this).data('emoji-completion', 'on');
         jQuery(this).atwho({
           at: ':',
-          start_with_space: false,
+          start_with_space: true,
           data: emojify.emojiNames,
           tpl: "<li data-value=':${name}:'><img src='<%= image_path 'emojis' %>/${name}.png' height='20' width='20'/> ${name} </li>"
         });
