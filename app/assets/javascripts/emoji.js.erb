@@ -16,10 +16,11 @@ See doc/COPYRIGHT.md for more details.
 
 jQuery(function ($) {
   emojify.setConfig({
-    emojify_tag_type : 'div',                        // Only run emojify.js on this element
-    only_crawl_id    : null,                         // Use to restrict where emojify.js applies
-    img_dir          : '<%= image_path 'emojis' %>', // Directory for emoji images
-    ignored_tags     : {                             // Ignore the following tags
+    emojify_tag_type  : 'div',                        // Only run emojify.js on this element
+    emoticons_enabled : false,                        // disable emoticons
+    only_crawl_id     : null,                         // Use to restrict where emojify.js applies
+    img_dir           : '<%= image_path 'emojis' %>', // Directory for emoji images
+    ignored_tags      : {                             // Ignore the following tags
         'SCRIPT'  : 1,
         'TEXTAREA': 1,
         'PRE'     : 1,
