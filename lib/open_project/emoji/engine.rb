@@ -23,7 +23,7 @@ module OpenProject::Emoji
 
     register 'openproject-emoji',
              :author_url => 'http://tessenow.org',
-             :requires_openproject => '>= 3.1.0pre1',
+             :requires_openproject => '>= 3.0.8',
              :global_assets => {js:  'emoji.js',
                                 css: 'emoji.css'}
 
