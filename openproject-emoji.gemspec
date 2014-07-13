@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version     = OpenProject::Emoji::VERSION
   s.authors     = "Philipp Tessenow"
   s.email       = "philipp@tessenow.org"
-  s.homepage    = "https://github.com/tessi/openproject-emoji"  # TODO check this URL
+  s.homepage    = "https://github.com/tessi/openproject-emoji"
   s.summary     = 'OpenProject Emoji'
   s.description = 'Displays emoji images in OpenProject :thumbs_up:'
   s.license     = "GPLv3"
