@@ -14,8 +14,10 @@ with auto-completion in textareas
 Edit the `Gemfile.plugins` file in your openproject-installation directory to contain the following lines:
 
 <pre>
-gem "openproject-emoji", :git => 'https://github.com/tessi/openproject-emoji.git'
+gem "openproject-emoji", :git => 'https://github.com/tessi/openproject-emoji.git', :branch => 'stable'
 </pre>
+
+(you may omit the ", :branch => 'stable'" part if you are running a development version of OpenProject)
 
 Then update your bundle with the following commands executed from your openproject directory:
 
