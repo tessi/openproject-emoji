@@ -30,5 +30,9 @@ module OpenProject::Emoji
     initializer 'emoji.precompile_assets' do |app|
       app.config.assets.precompile += ['emojify.js', 'emoji.js', 'emoji.css']
     end
+
+    config.to_prepare do |app|
+      NonStupidDigestAssets.whitelist << /emojis\/.*\.png/
+    end
   end
 end
