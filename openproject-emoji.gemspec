@@ -16,5 +16,4 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,doc,lib,vendor}/**/*"] + %w(README.md)
 
   s.add_dependency 'rails', '~> 3.2'
-  s.add_dependency 'openproject-plugins', '~> 4.0', '>= 4.0.0'
 end
