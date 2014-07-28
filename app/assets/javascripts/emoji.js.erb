@@ -62,5 +62,11 @@ jQuery(function ($) {
   }
 
   $(document).bind('DOMNodeInserted', function(event){ setup_emojis(); });
+
+  // In elements with the text-diff class openproject might show unrendered
+  // markus (textile, markdown, ..). We don't emojify that to avoid unwanted
+  // emoticons.
+  $('.text-diff').addClass('no-emojify');
+
   setup_emojis()
 });
