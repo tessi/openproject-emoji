@@ -12,6 +12,7 @@ See doc/COPYRIGHT.md for more details.
 
 ++#%>
 
+<% require_asset 'classList.js' %>
 <% require_asset 'emojify' %>
 
 jQuery(function ($) {
@@ -64,9 +65,9 @@ jQuery(function ($) {
   $(document).bind('DOMNodeInserted', function(event){ setup_emojis(); });
 
   // In elements with the text-diff class openproject might show unrendered
-  // markus (textile, markdown, ..). We don't emojify that to avoid unwanted
+  // markup (textile, markdown, ..). We don't emojify that to avoid unwanted
   // emoticons.
   $('.text-diff').addClass('no-emojify');
 
-  setup_emojis()
+  setup_emojis();
 });
