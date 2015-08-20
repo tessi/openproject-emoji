@@ -17,7 +17,14 @@ Edit the `Gemfile.plugins` file in your openproject-installation directory to co
 gem "openproject-emoji", :git => 'https://github.com/tessi/openproject-emoji.git', :branch => 'stable'
 </pre>
 
-(you may omit the ", :branch => 'stable'" part if you are running a development version of OpenProject)
+
+
+use ", :branch => 'op-3-stable'" for OpenProject 3.X.X
+
+use ", :branch => 'op-4-stable'" for OpenProject 4.X.X
+
+use ", :branch => 'op-5-stable'" for OpenProject 5.X.X
+
 
 Then update your bundle with the following commands executed from your openproject directory:
 
