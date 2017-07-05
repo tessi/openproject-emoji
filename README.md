@@ -1,6 +1,6 @@
 # DEPRECATION WARNING
 
-It's been a long time since I developed OpenProject Plugins and ecause of time constraints, I cannot keep up with upstream changes. Please be aware that currently I do not maintain this project. If anyone wants to take over, feel free to fork or contact me.
+It's been a long time since I developed OpenProject Plugins and because of time constraints, I cannot keep up with upstream changes. Please be aware that currently I do not maintain this project. If anyone wants to take over, feel free to fork or contact me.
 
 
 # OpenProject Emoji Plugin
